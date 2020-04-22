@@ -1,4 +1,10 @@
-export interface MoviePoster {
+export interface MovieState {
+movies: Movie[];  // datatype: movies 
+}
+
+// new comment to sway github into believing changes have been made... (heavy sigh)
+
+export interface Movie {
     movieID: number;
     title: string;
     year: number;
@@ -6,9 +12,4 @@ export interface MoviePoster {
     imdb: string;
     summary: string;
     poster: string;
-}
-
-export interface MovieChoices {
-    title: string;
-    year: number;
 }
