@@ -3,6 +3,7 @@ import { Button, Comment, Form, Header } from 'semantic-ui-react'
 
 const CommentExampleComment = () => (
     // this comment box with submission is taken from samantic-ui-react
+    // comment looping> consider class example >> SectionWithLoopRendering.tsx
   <Comment.Group>
     <Header as='h3' dividing>
       Comments

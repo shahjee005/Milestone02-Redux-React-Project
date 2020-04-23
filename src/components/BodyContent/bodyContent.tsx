@@ -3,7 +3,7 @@ import { Image, Grid } from 'semantic-ui-react';
 
 export interface IBodyProps {
 }
-
+// this was taken from semantic ui react
 export default class Body extends React.Component<IBodyProps> {
   public render() {
     return (
@@ -31,12 +31,14 @@ export default class Body extends React.Component<IBodyProps> {
                         </Grid.Column>
                     </Grid.Row>
                     <Grid.Row>
-                    <Grid.Column width={2}>
+                        <Grid.Column width={2}>
                             Genre:
                         </Grid.Column>
                         <Grid.Column width={6}>
                             Adventure
                         </Grid.Column>
+                    </Grid.Row>
+                    <Grid.Row>
                         <Grid.Column width={2}>
                             IMDB:
                         </Grid.Column>
