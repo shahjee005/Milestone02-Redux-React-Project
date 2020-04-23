@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-export interface IBodyProps {
+export interface ISubmitButtonProps {
 }
 
-export default class Body extends React.Component<IBodyProps> {
+export default class SubmitButton extends React.Component<ISubmitButtonProps> {
   public render() {
     return (
       <div>

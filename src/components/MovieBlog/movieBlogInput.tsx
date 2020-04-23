@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-export interface IBodyProps {
+export interface IMovieBlogInputProps {
 }
 
-export default class Body extends React.Component<IBodyProps> {
+export default class MovieBlogInput extends React.Component<IMovieBlogInputProps> {
   public render() {
     return (
       <div>

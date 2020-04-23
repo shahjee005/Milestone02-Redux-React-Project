@@ -4,6 +4,16 @@ import Body from './components/BodyContent/bodyContent';
 import MovieContainer from './components/MovieBlog/movieBlogContainer';
 import NavigationBar from './components/NavBar/navigationBar';
 
+// consider this for state > this is taken from "react-in-class-demo"
+// interface IState {
+//   menuItems: IMenuItem[];
+//   isButtonPressed: boolean;
+//   userName: string;
+//   password: string | number;
+// }
+
+
+
 function App() {
   return (
     <div className="App">
