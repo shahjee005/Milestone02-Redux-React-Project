@@ -1,21 +1,25 @@
-export interface LoginForm {
+export interface User {
   username: string;
   password: string;
 }
 
-export interface LoginState {
-  isUserLoggedin: boolean;
+export interface LoginInfoState {
+  users: User[];
 }
 
-export const SHOW_LOGIN_FORM = "SHOW_LOGIN_FORM";
-export const SHOW_LOGIN_ERROR = "SHOW_LOGIN_ERROR";
+export const REMOVE_USER_FROM_LOGININFO = "EMOVE_USER_FROM_LOGININFO";
+export const ADD_USER_TO_LOGININFO = "ADD_USER_TO_LOGININFO";
 
-interface ShowLoginForm {
-  type: typeof SHOW_LOGIN_FORM;
+interface RemoveUserFromLoginInfo {
+  type: typeof REMOVE_USER_FROM_LOGININFO;
+  payload: string;
 }
 
-interface ShowLoginError {
-  type: typeof SHOW_LOGIN_ERROR;
+interface AddUserFromLoginInfo {
+  type: typeof ADD_USER_TO_LOGININFO;
+  payload: User;
 }
 
-export type LoginFormActionType = ShowLoginForm | ShowLoginError;
+export type LoginInfoActionTypes =
+  | RemoveUserFromLoginInfo
+  | AddUserFromLoginInfo;

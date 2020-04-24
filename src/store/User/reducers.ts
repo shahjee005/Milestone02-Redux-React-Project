@@ -1,40 +1,39 @@
 import {
-  LoginFormActionType,
-  SHOW_LOGIN_FORM,
-  SHOW_LOGIN_ERROR,
-  LoginForm,
-  LoginState,
+  LoginInfoActionTypes,
+  REMOVE_USER_FROM_LOGININFO,
+  ADD_USER_TO_LOGININFO,
+  LoginInfoState,
 } from "./types";
 
-let initialState: LoginState = {
-  LoginForm:[
-        {
-          username: "Niloufar",
-          password: "ABC",
-        },
-        {
-          username: "Orange",
-          password: "GFH",
-        },
-      ],
-    }
-    
-
-  isUserLoggedin: false,
+const initialState: LoginInfoState = {
+  users: [
+    {
+      username: "Niloufar",
+      password: "ABC",
+    },
+    {
+      username: "Orange",
+      password: "GFH",
+    },
+  ],
 };
 
-
-
-export function loginReducer( state = initialState, action: LoginFormActionType) {
+export function loginInfoReducer(
+  state = initialState,
+  action: LoginInfoActionTypes
+) {
   switch (action.type) {
-  case SHOW_LOGIN_FORM:
-  return {
-    LoginState true };
-  };
-  case SHOW_LOGIN_ERROR{
-     
-  }
-  default:
+    case REMOVE_USER_FROM_LOGININFO:
+      return {
+        ...state,
+        users: state.users.filter((user) => user.username !== action.payload),
+      };
+    case ADD_USER_TO_LOGININFO:
+      return {
+        ...state,
+        users: [...state.users, action.payload],
+      };
+    default:
       return state;
   }
 }
