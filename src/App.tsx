@@ -1,23 +1,19 @@
-import React from "react";
-import "./App.css";
-import { Grid } from "semantic-ui-react";
-import LoginForm from "./components/Login/loginForm";
-// import loginButtonNavbar from "./components/NavBar/loginButtonNavbar";
-// import navigationBar from "./components/NavBar/navigationBar";
+import * as React from "react";
+import { Fragment } from "react";
+import NavBar from "./components/navigationBar/NavBar";
+import { Switch, Route } from "react-router-dom";
+import LoginPage from "./components/Login/LoginPage";
+export interface IAppProps {}
 
-function App() {
-  return (
-    <Grid centered>
-      <Grid.Row>
-        <h1>Milestone-02 Redux-react-typescript Projet</h1>
-      </Grid.Row>
-      <Grid.Row>{/* <navigationBar /> */}</Grid.Row>{" "}
-      <Grid.Row>{/* <loginButtonNavbar /> */}</Grid.Row>
-      <Grid.Row>
-        <LoginForm />
-      </Grid.Row>
-    </Grid>
-  );
+export default class App extends React.Component<IAppProps> {
+  public render() {
+    return (
+      <Fragment>
+        <NavBar />
+        <Switch>
+          <Route exact path="/login" component={LoginPage} />
+        </Switch>
+      </Fragment>
+    );
+  }
 }
-
-export default App;
