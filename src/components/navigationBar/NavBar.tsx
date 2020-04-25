@@ -91,15 +91,17 @@ export class NavBar extends React.Component<INavBarProps, INavBarState> {
           >
             About US
           </Menu.Item>
-          <Menu.Item
-            name="login"
-            active={activeItem === "login"}
-            as={Link}
-            to={"/login"}
-            onClick={() => this.changeActiveItem("login")}
-          >
-            Login
-          </Menu.Item>
+          <Menu.Menu position="right">
+            <Menu.Item
+              name="login"
+              active={activeItem === "login"}
+              as={Link}
+              to={"/login"}
+              onClick={() => this.changeActiveItem("login")}
+            >
+              Login
+            </Menu.Item>
+          </Menu.Menu>
         </React.Fragment>
       );
     }

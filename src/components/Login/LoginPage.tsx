@@ -93,7 +93,7 @@ export class LoginPage extends React.Component<
                     {this.state.isUserFormInvalid && <h3>Invalid!</h3>}
                   </div>
                   <div>
-                    <Button type="submit" color="green">
+                    <Button type="submit" color="blue">
                       Submit
                     </Button>
                   </div>
