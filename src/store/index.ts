@@ -5,8 +5,8 @@ import { loginReducer } from "./login/reducers";
 import { userReducer } from "./users/reducers";
 
 const rootReducer = combineReducers({
-  session: loginReducer,
-  students: userReducer,
+  login: loginReducer,
+  users: userReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
