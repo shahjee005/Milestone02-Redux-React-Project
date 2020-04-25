@@ -4,7 +4,7 @@ import {
   removeUserFromLoginInfo,
   addUserToLoginInfo,
 } from "../../store/user/actionts";
-import { User } from "../../store/user/types";
+import User from "../../store/user/types";
 import { Button, Form, Grid } from "semantic-ui-react";
 import { connect } from "react-redux";
 
@@ -14,7 +14,7 @@ export interface ILoginInfoProps {
   users: User[];
 }
 
-export class LoginInfo extends React.Component<ILoginInfoProps> {
+export class LoginForm extends React.Component<ILoginInfoProps> {
   newProduct = (event: any) => {
     event.preventDefault();
     const formField: HTMLInputElement | null = document.querySelector(
@@ -67,4 +67,4 @@ const mapStateToProps = (state: RootState) => {
 export default connect(mapStateToProps, {
   addUserToLoginInfo,
   removeUserFromLoginInfo,
-})(LoginInfo);
+})(LoginForm);

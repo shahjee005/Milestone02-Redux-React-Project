@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Grid } from "semantic-ui-react";
-import loginInfo from "./components/Login/loginForm";
+import LoginForm from "./components/Login/loginForm";
 // import loginButtonNavbar from "./components/NavBar/loginButtonNavbar";
 // import navigationBar from "./components/NavBar/navigationBar";
 
@@ -14,7 +14,7 @@ function App() {
       <Grid.Row>{/* <navigationBar /> */}</Grid.Row>{" "}
       <Grid.Row>{/* <loginButtonNavbar /> */}</Grid.Row>
       <Grid.Row>
-        <LoginInfo />
+        <LoginForm />
       </Grid.Row>
     </Grid>
   );
