@@ -3,13 +3,21 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import { createBrowserHistory } from "history";
+import { Router } from "react-router-dom";
+import configureStore from "./store";
 import { Provider } from "react-redux";
-import store from "./store";
+
+const store = configureStore;
+export const history = createBrowserHistory();
 
 ReactDOM.render(
-  <Provider store={store()}>
-    <App />
-  </Provider>,
+  <Router history={history}>
+    <Provider store={store()}>
+      <App />
+    </Provider>
+  </Router>,
   document.getElementById("root")
 );
+
 serviceWorker.unregister();
