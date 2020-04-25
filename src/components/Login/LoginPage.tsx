@@ -92,11 +92,13 @@ export class LoginPage extends React.Component<
                     />
                     {this.state.isUserFormInvalid && <h3>Invalid!</h3>}
                   </div>
-                  <div>
-                    <Button type="submit" color="blue">
-                      Submit
-                    </Button>
-                  </div>
+                  <Grid.Row padding={10} with={16}>
+                    <div>
+                      <Button type="submit" color="blue" padding={10} with={16}>
+                        Submit
+                      </Button>
+                    </div>
+                  </Grid.Row>
                 </Form>
               )}
             </Formik>

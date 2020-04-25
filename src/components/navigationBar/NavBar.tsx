@@ -60,14 +60,16 @@ export class NavBar extends React.Component<INavBarProps, INavBarState> {
           >
             About US
           </Menu.Item>
-          <Menu.Item
-            name="log out"
-            active={activeItem === "logout"}
-            as={Link}
-            onClick={() => this.props.logOutUserFromSystem()}
-          >
-            Log Out
-          </Menu.Item>
+          <Menu.Menu position="right">
+            <Menu.Item
+              name="log out"
+              active={activeItem === "logout"}
+              as={Link}
+              onClick={() => this.props.logOutUserFromSystem()}
+            >
+              Log Out
+            </Menu.Item>
+          </Menu.Menu>
         </React.Fragment>
       );
     } else {
@@ -106,12 +108,14 @@ export class NavBar extends React.Component<INavBarProps, INavBarState> {
       );
     }
 
-    return <Menu inverted>{shownMenuItems}</Menu>;
+    return (
+      <Menu inverted style={{ backgroundColor: "blue" }}>
+        {shownMenuItems}
+      </Menu>
+    );
   }
 
-  componentDidUpdate() {
-    // console.log("fG8MIlcxkEAGC8/d9haLXXL9m+qDwprLnr0pNz1dT14=");
-  }
+  componentDidUpdate() {}
 }
 const mapStateToProps = (state: RootState) => {
   return {
