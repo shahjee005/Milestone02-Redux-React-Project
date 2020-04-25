@@ -1,15 +1,21 @@
-import { combineReducers, createStore } from "redux";
-import { userReducers } from "./user/reducers";
-// import { loginReducer } from "./login/reducers";
+import { combineReducers, createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
+
+import { loginReducer } from "./login/reducers";
+import { userReducer } from "./users/reducers";
 
 const rootReducer = combineReducers({
-  user: userReducers,
-  // login: loginReducer,
+  session: loginReducer,
+  students: userReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
 
 export default function configureStore() {
-  const store = createStore(rootReducer);
+  const store = createStore(
+    rootReducer,
+    composeWithDevTools(applyMiddleware())
+  );
+
   return store;
 }
