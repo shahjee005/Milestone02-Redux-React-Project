@@ -81,7 +81,7 @@ export class LoginPage extends React.Component<
                     />
                   </div>
                   <div>
-                    {this.state.isUserFormInvalid && <h3>Invalid!</h3>}
+                    {this.state.isUserFormInvalid}
                     <h3>Password: </h3>
                     <Field
                       placeholder="password"
@@ -90,10 +90,12 @@ export class LoginPage extends React.Component<
                       type="input"
                       as={Input}
                     />
-                    {this.state.isUserFormInvalid && <h3>Invalid!</h3>}
+                    {this.state.isUserFormInvalid && (
+                      <h4>Invalid username or password</h4>
+                    )}
                   </div>
-                  <Grid.Column>
-                    <Button type="submit" color="blue" margin={16}>
+                  <Grid.Column style={{ "margin-top": "16px" }}>
+                    <Button type="submit" color="blue">
                       Submit
                     </Button>
                   </Grid.Column>
