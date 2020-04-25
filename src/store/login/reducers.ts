@@ -1,46 +1,32 @@
 import {
-  LoginFormActionType,
-  SHOW_LOGIN_FORM,
-  SHOW_LOGIN_ERROR,
-  LoginForm,
   LoginState,
+  LoginActionTypes,
+  LOG_IN_USER_FROM_SYSTEM,
+  LOG_OUT_USER_FROM_SYSTEM,
 } from "./types";
 
-const
-
-let initialState: LoginState = {
-  // LoginForm:[
-  //       {
-  //         username: "Niloufar",
-  //         password: "ABC",
-  // isUserLoggedin: false,
-  //       },
-  //       {
-  //         username: "Orange",
-  //         password: "GFH",
-  //       },
-  //     ],
-  //   }
-
-  isUserLoggedin: false,
+const initialState: LoginState = {
+  loggedInUserId: 0,
 };
 
-export function loginReducer( state = initialState, action: LoginFormActionType) {
+export function loginReducer(
+  state = initialState,
+  action: LoginActionTypes
+): LoginState {
   switch (action.type) {
-  case SHOW_LOGIN_FORM:
-  return {
-   ...state,
-   isUserLoggedin:true,
-  //  items: [ ...state.items, action.payload ]
+    case LOG_IN_USER_FROM_SYSTEM:
+      return {
+        ...state,
+        loggedInUserId: action.id,
+      };
 
-  };
-  case SHOW_LOGIN_ERROR{
-    ...state,
-    i
-  }
-  default:
+    case LOG_OUT_USER_FROM_SYSTEM:
+      return {
+        ...state,
+        loggedInUserId: 0,
+      };
+
+    default:
       return state;
   }
 }
-
-

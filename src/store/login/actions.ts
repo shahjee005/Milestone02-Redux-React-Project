@@ -1,8 +1,18 @@
-import { LoginFormActionType, SHOW_LOGIN_FORM } from "./types";
+import {
+  LoginActionTypes,
+  LOG_OUT_USER_FROM_SYSTEM,
+  LOG_IN_USER_FROM_SYSTEM,
+} from "./types";
 
-export function addItem(user: User): LoginActionTypes {
+export function logOutUserFromSystem(): LoginActionTypes {
   return {
-    type: ADD_ITEM_TO_Login,
-    // payload: user,
+    type: LOG_OUT_USER_FROM_SYSTEM,
+  };
+}
+
+export function logInUserFromSystem(thisWasCopied: number): LoginActionTypes {
+  return {
+    type: LOG_IN_USER_FROM_SYSTEM,
+    id: thisWasCopied,
   };
 }
