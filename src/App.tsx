@@ -11,6 +11,7 @@ export default class App extends React.Component<IAppProps> {
       <Fragment>
         <NavBar />
         <Switch>
+          {/* <Route exact path="/movielist" component={MovieList} /> */}
           <Route exact path="/login" component={LoginPage} />
         </Switch>
       </Fragment>

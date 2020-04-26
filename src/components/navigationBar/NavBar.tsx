@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { logOutUserFromSystem } from "../../store/login/actions";
 import { RootState } from "../../store";
 import { connect } from "react-redux";
+
 export interface INavBarProps {
   loggedInUserId: number;
   logOutUserFromSystem: typeof logOutUserFromSystem;
