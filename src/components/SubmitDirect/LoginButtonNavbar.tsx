@@ -56,3 +56,13 @@ export class LoginButtonNavbar extends React.Component<
     }
   };
 }
+
+const mapStateToProps = (state: RootState) => {
+  return {
+    users: state.users.users,
+  };
+};
+
+export default connect(mapStateToProps, { logInUserFromSystem })(
+  LoginButtonNavbar
+);
