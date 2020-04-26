@@ -2,7 +2,7 @@ import { Component, Fragment } from "react";
 import React from "react";
 import { RootState } from "../../store";
 import { connect } from 'react-redux';
-import { Button, Grid } from "semantic-ui-react";
+import { Button, Grid, Rating } from "semantic-ui-react";
 import { addBlogPosts } from "../../store/blogPost/actions";
 import { BlogPost } from "../../store/blogPost/types";
 
@@ -16,16 +16,20 @@ export class MovieBlogListOutput extends Component<IMovieBlogListOutputProps> {
   public render() {
     const { blogPosts } = this.props
     return (
-      <Grid centered>
+      <Grid centered >
         <Grid.Column >
+        <Rating icon='star' defaultRating={5} maxRating={5} />
           {blogPosts.length > 0 ?
             blogPosts.map(individualBlogPost => {
-              return <li key={individualBlogPost.id} >{individualBlogPost.blogPostDetail}</li>
+              return <li key={individualBlogPost.id} >{individualBlogPost.blogPostDetail}<Grid.Column>
+              
+              </Grid.Column></li>
             })
             :
             <p></p>
           }
         </Grid.Column>
+      
       </Grid>
     );
   }

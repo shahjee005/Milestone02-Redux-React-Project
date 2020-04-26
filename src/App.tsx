@@ -14,7 +14,7 @@ export class App extends React.Component<IAppProps> {
   public render() {
     return (
       <Fragment>
-        <Grid centered>
+        <Grid centered >
           <Grid.Row>
             <MainPage />
           </Grid.Row>

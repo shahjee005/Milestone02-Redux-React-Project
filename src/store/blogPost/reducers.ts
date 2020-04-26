@@ -6,8 +6,9 @@ const initialState: BlogPostsState = {
     blogPosts: [
         {
             id: 1,
-            blogPostDetail: "This first movie is awesome",
-
+            blogPostDetail: "This first movie is awesome. "  
+            
+         
         },
         {
             id: 2,

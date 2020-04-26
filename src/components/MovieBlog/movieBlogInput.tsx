@@ -41,9 +41,11 @@ export class MovieBlogInput extends Component<IMovieBlogInputProps, IMovieBlogIn
     return (
       <Fragment>
         <Grid.Row>
-        {/* <h2>New BlogPost:</h2> */}
-        <Input placeholder = 'Write your coments here'onChange={this.onUserFieldChange} />
-        <Button color='facebook' content='Submit' onClick={() => this.onClickAddBlogPost(newBlogPosts)} />
+       
+     
+    
+        <Input size='big' placeholder = 'Type your coments here....'onChange={this.onUserFieldChange} />
+        <Button size='big' color='facebook' content='Submit' onClick={() => this.onClickAddBlogPost(newBlogPosts)} />
         </Grid.Row>
       </Fragment>
       
