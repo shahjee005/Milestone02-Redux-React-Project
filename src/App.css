@@ -13,15 +13,17 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.blog {
+  margin-top:120px ;
+  text-align: left;
+  border: solid black 1px ;
+  min-height: 300px;
   align-items: center;
+  line-height: 35px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: auto;
+  color: black;
+
 }
 
 .App-link {

@@ -18,7 +18,7 @@ export class MovieBlogListOutput extends Component<IMovieBlogListOutputProps> {
     return (
       <Grid centered >
         <Grid.Column >
-        <Rating icon='star' defaultRating={5} maxRating={5} />
+        <Rating icon='star' defaultRating={5} maxRating={5} size='large' />
           {blogPosts.length > 0 ?
             blogPosts.map(individualBlogPost => {
               return <li key={individualBlogPost.id} >{individualBlogPost.blogPostDetail}<Grid.Column>

@@ -4,6 +4,7 @@ import React from "react";
 import { RootState } from "../../store";
 import { connect } from 'react-redux';
 import { addBlogPosts } from "../../store/blogPost/actions";
+import {Button1} from "./submitButton";
 
 
 
