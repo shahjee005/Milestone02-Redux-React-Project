@@ -8,14 +8,15 @@ const initialState: BlogPostsState = {
             id: 1,
             blogPostDetail: "This first movie is awesome",
 
-        }
-        // {
-        //     id: 2,
-        //     blogPostDetail: "This second movie fantastic family movie",
+        },
+        {
+            id: 2,
+            blogPostDetail: " This second one is movie is not so  ",
 
-        // }
+        }
+
     ],
-    NextId: 2
+    NextId: 3
 };
 
 //Reducer setup 

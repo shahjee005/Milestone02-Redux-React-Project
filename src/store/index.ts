@@ -1,4 +1,3 @@
-import { BlogPost, BlogPostsState } from './blogPost/types';
 import { combineReducers, createStore, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import { blogPostReducer } from './blogPost/reducers';

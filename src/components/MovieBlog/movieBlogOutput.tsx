@@ -8,7 +8,7 @@ import { BlogPost } from "../../store/blogPost/types";
 
 
 export interface IMovieBlogListOutputProps {
-   blogPosts: BlogPost[];
+  blogPosts: BlogPost[];
 }
 
 export class MovieBlogListOutput extends Component<IMovieBlogListOutputProps> {
@@ -16,14 +16,17 @@ export class MovieBlogListOutput extends Component<IMovieBlogListOutputProps> {
   public render() {
     const { blogPosts } = this.props
     return (
-    <Grid.Row  style={{ "margin-top": "px-200" }}>
-        { blogPosts.length > 0 ? 
-          blogPosts.map(individualBlogPost => {
-          return <li id="{individualBlogPost.id}">{individualBlogPost.blogPostDetail}</li> })
-        :
-          <p></p>
-        }
-     </Grid.Row>
+      <Grid centered>
+        <Grid.Column >
+          {blogPosts.length > 0 ?
+            blogPosts.map(individualBlogPost => {
+              return <li key={individualBlogPost.id} >{individualBlogPost.blogPostDetail}</li>
+            })
+            :
+            <p></p>
+          }
+        </Grid.Column>
+      </Grid>
     );
   }
 }
@@ -37,5 +40,5 @@ const mapStateToProps = (state: RootState) => {
 
 export default connect(
   mapStateToProps,
-  {addBlogPosts}
+  { addBlogPosts }
 )(MovieBlogListOutput); 
