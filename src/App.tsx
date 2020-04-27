@@ -7,7 +7,7 @@ import { addBlogPosts } from './store/blogPost/actions';
 import { connect } from 'react-redux';
 import MovieBlogListOutput from './components/MovieBlog/movieBlogOutput';
 import MovieBlogInput from './components/MovieBlog/movieBlogInput';
-import Button1 from './components/MovieBlog/submitButton';
+
 // import MovieList from './components/MovieBlog/MovieList/movieList';
 
 export interface IAppProps {
@@ -34,8 +34,7 @@ export class App extends React.Component<IAppProps> {
               <MovieBlogInput />
 
             </Grid.Row>
-            {/* <Button1 /> */}
-
+          
           </div>
         </Grid>
         
