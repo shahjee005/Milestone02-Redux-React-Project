@@ -19,7 +19,7 @@ export class NavBar extends React.Component<INavBarProps, INavBarState> {
     super(props);
 
     this.state = {
-      activeItem: "home",
+      activeItem: "movielist",
     };
   }
   private changeActiveItem = (activeItem: string) => {
@@ -44,11 +44,11 @@ export class NavBar extends React.Component<INavBarProps, INavBarState> {
       shownMenuItems = (
         <React.Fragment>
           <Menu.Item
-            name="home"
-            active={activeItem === "home"}
+            name="movielist"
+            active={activeItem === "movielist"}
             as={Link}
             to={"/"}
-            onClick={() => this.changeActiveItem("home")}
+            onClick={() => this.changeActiveItem("movielist")}
           >
             Movie List
           </Menu.Item>
@@ -56,7 +56,7 @@ export class NavBar extends React.Component<INavBarProps, INavBarState> {
             name="aboutus"
             active={activeItem === "aboutus"}
             as={Link}
-            to={"/"}
+            to={"/aboutus"}
             onClick={() => this.changeActiveItem("aboutus")}
           >
             About US
@@ -77,11 +77,11 @@ export class NavBar extends React.Component<INavBarProps, INavBarState> {
       shownMenuItems = (
         <React.Fragment>
           <Menu.Item
-            name="home"
-            active={activeItem === "home"}
+            name="movielist"
+            active={activeItem === "movielist"}
             as={Link}
             to={"/"}
-            onClick={() => this.changeActiveItem("home")}
+            onClick={() => this.changeActiveItem("movielist")}
           >
             Movie List
           </Menu.Item>
@@ -89,7 +89,7 @@ export class NavBar extends React.Component<INavBarProps, INavBarState> {
             name="aboutus"
             active={activeItem === "aboutus"}
             as={Link}
-            to={"/"}
+            to={"/aboutus"}
             onClick={() => this.changeActiveItem("aboutus")}
           >
             About US

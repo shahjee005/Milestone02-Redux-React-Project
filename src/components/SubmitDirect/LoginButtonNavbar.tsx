@@ -52,7 +52,7 @@ export class LoginButtonNavbar extends React.Component<
       this.setState({
         isUserFormInvalid: true,
       });
-      return (window.location.href = "/movielist");
+      return (window.location.href = "/");
     }
   };
 }
