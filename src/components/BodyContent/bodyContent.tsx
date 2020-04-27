@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Grid, Form } from 'semantic-ui-react';
+import { Grid, Form, Divider } from 'semantic-ui-react';
 import './Bodycontent.css';
 
 export interface IMainPageProps {
@@ -30,6 +30,7 @@ export default class MainPage extends React.Component<IMainPageProps> {
                 </ul>
               </Grid.Row>
             </div>
+            <Divider>  </Divider>
           </React.Fragment>
         </Grid.Column>
       </Grid>

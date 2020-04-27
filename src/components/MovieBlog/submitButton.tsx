@@ -7,7 +7,7 @@ export interface IButton1Props {
 
 export  class Button1 extends React.Component<IButton1Props> {
  
-state = { open: false, result: 'show the modal to capture a result' }
+state = { open: false, result: 'please make sure before submition.' }
 
   show = () => this.setState({ open: true })
   handleConfirm = () => this.setState({ result: 'confirmed', open: false })
@@ -19,7 +19,7 @@ state = { open: false, result: 'show the modal to capture a result' }
     return (
       <div>
         <p>
-          {/* Result: <em>{result}</em> */}
+          Confirmed?: <em>{result}</em>
         </p>
 
         <Button color = 'green' onClick={this.show}>button</Button>

@@ -8,6 +8,7 @@ import { connect } from 'react-redux';
 import MovieBlogListOutput from './components/MovieBlog/movieBlogOutput';
 import MovieBlogInput from './components/MovieBlog/movieBlogInput';
 import Button1 from './components/MovieBlog/submitButton';
+// import MovieList from './components/MovieBlog/MovieList/movieList';
 
 export interface IAppProps {
 }
@@ -15,9 +16,13 @@ export class App extends React.Component<IAppProps> {
   public render() {
     return (
       <Fragment>
+         {/* <div className='Movielist'>
+        <MovieList/>
+        </div> */}
         <Grid centered >
+         
           <Grid.Row>
-            <MainPage />
+            {/* <MainPage /> */}
           </Grid.Row>
         
           <div className='blog'>
@@ -29,10 +34,11 @@ export class App extends React.Component<IAppProps> {
               <MovieBlogInput />
 
             </Grid.Row>
-            <Button1 />
+            {/* <Button1 /> */}
 
           </div>
         </Grid>
+        
       </Fragment>
     );
 

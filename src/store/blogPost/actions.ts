@@ -7,6 +7,6 @@ export function addBlogPosts(blogPosts: string): BlogPostActionTypes {
     return {
         type: ADD_BLOG_POST_TO_LIST,
         payload: blogPosts
-    }
+    };
 
 }
