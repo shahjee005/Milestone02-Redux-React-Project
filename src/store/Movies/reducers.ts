@@ -1,8 +1,12 @@
-import { MovieDropDownListState, MovieDetails, MovieDropDownList, MovieDetailsState } from "./types";
+import { 
+  Movie,
+  MovieState
+}  from "./types";
 
 
 // Set up a default or "initial" state for our app.
-const initialState: MovieDetailsState = { movieDetails: [
+const initialState: MovieState = { 
+  movies: [
     {
       movieID: 1,
       title: "The Wolf of Wall Street",
@@ -98,15 +102,6 @@ const initialState: MovieDetailsState = { movieDetails: [
     },
   ],
 };
-export function movieDetailsReducer(state = initialState, action: MovieDetails): MovieDetailsState {
-  switch (action.type) {
-      case SELECT_MOVIE:
-          return {
-              ...state,
-              selectedItems: [...state.selectedItems, action.payload]
-          }
-  
-  
-  
-      default:
-          return state;
+export function moviesReducer(state = initialState) {
+  return state;
+  }

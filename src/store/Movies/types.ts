@@ -1,17 +1,8 @@
-export interface MovieDropDownListState {
-  movieDropDownList: MovieDropDownList[]; // datatype: movies
+export interface MovieState {
+    movies: Movie[];
 }
 
-export interface MovieDropDownList {
-  movieID: number;
-  title: string;
-}
-
-export interface MovieDetailsState {
-    movieDetails: MovieDetails[];
-}
-
-export interface MovieDetails {
+export interface Movie {
     movieID: number;
     title: string;
     year: number;
@@ -22,17 +13,9 @@ export interface MovieDetails {
   }
 
 // Action types/names
-export const GET_MOVIE_FROM_DROPDOWN = "GET_MOVIE_FROM_DROPDOWN";
-export const DISPLAY_MOVIE_DETAILS = "DISPLAY_MOVIE_DETAILS";
+// No action types required as we are not adding or deleting from movies
 
-export interface MovieDropDownList {
-type: typeof GET_MOVIE_FROM_DROPDOWN;
-payload: number;  // This will match our movieID
-}
+// Define action requirements
+// No actions required as we are not adding or deleting from movies
 
-export interface displayMovieDetails {
-    type: typeof DISPLAY_MOVIE_DETAILS;
-    payload: number; //
-}
-
-export type MovieActionTypes = MovieDetails | MovieDropDownList;
+// export type MovieActionTypes = MovieDetails | MovieDropDownList;
