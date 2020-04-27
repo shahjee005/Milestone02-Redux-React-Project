@@ -11,10 +11,9 @@ export interface IMoviesProps {
   movies: Movie[]
 }
 
-export default class Movies extends React.Component<IMoviesProps> {
-  public render() {
-
-
+export class Movies extends React.Component<IMoviesProps> {
+  render() {
+    
     return (
       <Grid>
       <h3>Movies</h3>
@@ -42,49 +41,3 @@ const mapStateToProps = ( state: MovieState ) => {
       movies: state.movies
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-// export default class MovieDropDownList extends React.Component<IMovieDropDownListProps> {
-//  public render() {
-//    return (
-//      <Fragment>
- 
- 
-//    const some map function from movieList to return titles and put into a list of buttons
-//    const movieOptions = [
- 
-//    { this.props.movies.map(eachMovie => (
-//        <div>{eachMovie.</div>
-//    )
-      
-//        ) },
-//    { key: this.props.movies.movieID, value: 'bs', text: movies.title },
-
-// ]
- 
-//  const DropdownMovieList = () => (
-//  <Dropdown
-//      placeholder='Select Movie'
-//      fluid
-//      search
-//      selection
-//      options={movieList}
-//  />
-//  )
-
-//  export default DropdownMovieList
-// </Fragment>
-// );
-// }
-// }
