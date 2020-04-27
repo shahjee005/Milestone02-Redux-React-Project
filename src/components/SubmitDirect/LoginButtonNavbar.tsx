@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Menu } from "semantic-ui-react";
-import { Link } from "react-router-dom";
-import { logOutUserFromSystem } from "../../store/login/actions";
+// import { Menu } from "semantic-ui-react";
+// import { Link } from "react-router-dom";
+// import { logOutUserFromSystem } from "../../store/login/actions";
 import { RootState } from "../../store";
 import { connect } from "react-redux";
 import { User } from "../../store/users/types";
@@ -10,8 +10,8 @@ import { logInUserFromSystem } from "../../store/login/actions";
 export interface ILoginButtonNavbarProps {
   users: User[];
   logInUserFromSystem: typeof logInUserFromSystem;
-  loggedInUserId: number;
-  logOutUserFromSystem: typeof logOutUserFromSystem;
+  // loggedInUserId: number;
+  // logOutUserFromSystem: typeof logOutUserFromSystem;
 }
 
 export interface ILoginButtonNavbarState {

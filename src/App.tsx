@@ -3,6 +3,8 @@ import { Fragment } from "react";
 import NavBar from "./components/navigationBar/NavBar";
 import { Switch, Route } from "react-router-dom";
 import LoginPage from "./components/Login/LoginPage";
+// import LoginButtonNavbar from "./components/SubmitDirect/LoginButtonNavbar";
+
 export interface IAppProps {}
 
 export default class App extends React.Component<IAppProps> {
@@ -14,6 +16,7 @@ export default class App extends React.Component<IAppProps> {
           {/* <Route exact path="/movielist" component={MovieList} /> */}
           <Route exact path="/login" component={LoginPage} />
         </Switch>
+        {/* <LoginButtonNavbar /> */}
       </Fragment>
     );
   }
