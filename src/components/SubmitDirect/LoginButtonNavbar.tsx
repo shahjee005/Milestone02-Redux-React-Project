@@ -1,17 +1,15 @@
 import * as React from "react";
-// import { Menu } from "semantic-ui-react";
-// import { Link } from "react-router-dom";
-// import { logOutUserFromSystem } from "../../store/login/actions";
+import { Formik } from "formik";
 import { RootState } from "../../store";
 import { connect } from "react-redux";
 import { User } from "../../store/users/types";
 import { logInUserFromSystem } from "../../store/login/actions";
+import { withRouter } from "react-router-dom";
 
 export interface ILoginButtonNavbarProps {
   users: User[];
   logInUserFromSystem: typeof logInUserFromSystem;
-  // loggedInUserId: number;
-  // logOutUserFromSystem: typeof logOutUserFromSystem;
+  history: any;
 }
 
 export interface ILoginButtonNavbarState {
@@ -36,7 +34,6 @@ export class LoginButtonNavbar extends React.Component<
 
   private validateCredentials = (data: UserNameAndPasswordCombo) => {
     let { logInUserFromSystem, users } = this.props;
-
     let singleUser = users.filter((individualUser) => {
       return (
         individualUser.password === data.password &&
@@ -46,23 +43,39 @@ export class LoginButtonNavbar extends React.Component<
     if (singleUser) {
       logInUserFromSystem(singleUser.id);
       this.setState({
-        isUserFormInvalid: false,
+        isUserFormInvalid: true,
       });
     } else {
       this.setState({
-        isUserFormInvalid: true,
+        isUserFormInvalid: false,
       });
-      return (window.location.href = "/");
+      this.props.history.push("/");
     }
   };
-}
 
+  public render() {
+    return (
+      <Formik
+        initialValues={{
+          username: "",
+          password: "",
+        }}
+        onSubmit={(data: UserNameAndPasswordCombo) => {
+          this.validateCredentials(data);
+          return this.props.history.push("/");
+        }}
+      >
+        {/* if (!isUserFormInvalid) {this.props.history.push("/")} */}
+      </Formik>
+    );
+  }
+}
 const mapStateToProps = (state: RootState) => {
   return {
     users: state.users.users,
   };
 };
 
-export default connect(mapStateToProps, { logInUserFromSystem })(
-  LoginButtonNavbar
+export default withRouter(
+  connect(mapStateToProps, { logInUserFromSystem })(LoginButtonNavbar)
 );
