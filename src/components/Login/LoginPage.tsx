@@ -5,10 +5,12 @@ import { RootState } from "../../store";
 import { connect } from "react-redux";
 import { User } from "../../store/users/types";
 import { logInUserFromSystem } from "../../store/login/actions";
+import { withRouter } from "react-router-dom";
 
 export interface ILoginPageProps {
   users: User[];
   logInUserFromSystem: typeof logInUserFromSystem;
+  history: any;
 }
 
 export interface ILoginPageState {
@@ -66,6 +68,7 @@ export class LoginPage extends React.Component<
               }}
               onSubmit={(data: UserNameAndPasswordCombo) => {
                 this.validateCredentials(data);
+                this.props.history.push("/");
               }}
             >
               {({ values, handleChange, handleBlur }) => (
@@ -115,4 +118,6 @@ const mapStateToProps = (state: RootState) => {
   };
 };
 
-export default connect(mapStateToProps, { logInUserFromSystem })(LoginPage);
+export default withRouter(
+  connect(mapStateToProps, { logInUserFromSystem })(LoginPage)
+);

@@ -62,11 +62,9 @@ export class LoginButtonNavbar extends React.Component<
         }}
         onSubmit={(data: UserNameAndPasswordCombo) => {
           this.validateCredentials(data);
-          return this.props.history.push("/");
+          this.props.history.push("/");
         }}
-      >
-        {/* if (!isUserFormInvalid) {this.props.history.push("/")} */}
-      </Formik>
+      ></Formik>
     );
   }
 }
