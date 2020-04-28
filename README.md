@@ -1,3 +1,22 @@
+
+**********************     MOVIE BLOG APP    ********************
+This app has been built by using Redux, React, React-Router & typescript, Formik libraries as our milestone 02 project. The proposed aim of this app is to demonstrate; 
+1.	Semantic UI React 
+2.	Use of redux to mange the states 
+3.	Ability to get user input and process data before the output 
+4.	Use of props, lifecycle methods
+5.	 Use of React Router to display multiple pages 
+Following commands can be used to run this project 
+	npx create-react-app router-redux --typescript
+	npm install --save redux @types/redux
+	npm install --save react-redux @types/react-redux
+	npm install --save react-router-dom @types/react-router-dom
+	npm install semantic-ui-react
+	npm install react-calendar
+	npm I formic_
+USER MANUAL 
+By default, the user will find a active nav bar with Movie List abut us and login buttons with a home page. The User can login by correct user name and password. On successful login, user will be directed to the Movie Dropdown list and where he/she can select from list of selected movies and on choosing a movie from the list, the user will be directed to another page where certain predefined details of that movie can be seen (under construction). On the same page there is a functional movie blog section where the user can give his/her feed back about the movie and also can give ratings. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
