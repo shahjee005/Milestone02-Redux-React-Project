@@ -16,7 +16,7 @@ Following commands can be used to run this project
 - npm install --save react-router-dom @types/react-router-dom
 -	npm install semantic-ui-react
 -	npm install react-calendar
--	npm I formic_
+-	npm I formic
 
 
 ## USER MANUAL 
