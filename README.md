@@ -6,8 +6,10 @@ This app has been built by using Redux, React, React-Router & typescript, Formik
 2.	Use of redux to mange the states 
 3.	Ability to get user input and process data before the output 
 4.	Use of props, lifecycle methods
-5.	 Use of React Router to display multiple pages  
+5.	 Use of React Router to display multiple pages 
+
 Following commands can be used to run this project 
+
 -	npx create-react-app router-redux --typescript
 - npm install --save redux @types/redux
 - npm install --save react-redux @types/react-redux
