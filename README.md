@@ -1,5 +1,7 @@
 
-**********************     MOVIE BLOG APP    ********************
+                           MOVIE BLOG APP    
+
+
 This app has been built by using Redux, React, React-Router & typescript, Formik libraries as our milestone 02 project. The proposed aim of this app is to demonstrate; 
 1.	Semantic UI React 
 2.	Use of redux to mange the states 
