@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Grid, Form, Divider } from "semantic-ui-react";
+import { Grid, Divider } from "semantic-ui-react";
 import "./Bodycontent.css";
 
 export interface IMainPageProps {}

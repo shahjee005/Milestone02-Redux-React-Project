@@ -57,8 +57,8 @@ export class LoginButtonNavbar extends React.Component<
     return (
       <Formik
         initialValues={{
-          username: "",
-          password: "",
+          username: "string",
+          password: "string",
         }}
         onSubmit={(data: UserNameAndPasswordCombo) => {
           this.validateCredentials(data);

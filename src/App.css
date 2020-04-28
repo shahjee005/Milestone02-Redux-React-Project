@@ -14,16 +14,15 @@
 }
 
 .blog {
-  margin-top:400px ;
+  margin-top: 200px;
   text-align: left;
-  border: solid black 1px ;
-  min-height: 200px;
+  /* border: solid black 1px; */
+  min-height: 150px;
   align-items: center;
   line-height: 35px;
   justify-content: center;
   font-size: auto;
   color: black;
-
 }
 .App-link {
   color: #61dafb;
