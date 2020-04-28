@@ -1,13 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { Fragment } from "react";
+import NavBar from "./components/navigationBar/NavBar";
+import { Switch, Route } from "react-router-dom";
+import LoginPage from "./components/Login/LoginPage";
+import LoginButtonNavbar from "./components/SubmitDirect/LoginButtonNavbar";
+import MovieList from "./components/Movie/MovieList";
 
-function App() {
-  return (
-    <div className="App">
-     <h1>Milestone-02 Redux-react-typescript Projet  </h1>
-    </div>
-  );
+export interface IAppProps {}
+
+export default class App extends React.Component<IAppProps> {
+  public render() {
+    return (
+      <Fragment>
+        <NavBar />
+        <Switch>
+          <Route exact path="/" component={MovieList} />
+          <Route exact path="/login" component={LoginPage} />
+        </Switch>
+        <LoginButtonNavbar />
+      </Fragment>
+    );
+  }
 }
-
-export default App;
